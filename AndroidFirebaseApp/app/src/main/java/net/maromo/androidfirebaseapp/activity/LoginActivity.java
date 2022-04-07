@@ -30,8 +30,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText edt_email;
     private EditText edt_senha;
-    private Button btn_login;
-    private Button btn_registrar;
     private FirebaseAuth mAuth;
     private ProgressBar loginProgressBar;
     private CheckBox ckb_mostrar_senha;
@@ -44,8 +42,8 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         edt_email = findViewById(R.id.edt_email);
         edt_senha = findViewById(R.id.edt_senha);
-        btn_login = findViewById(R.id.btn_login);
-        btn_registrar = findViewById(R.id.btn_registrar);
+        Button btn_login = findViewById(R.id.btn_login);
+        Button btn_registrar = findViewById(R.id.btn_registrar);
         loginProgressBar = findViewById(R.id.login_progress_bar);
         ckb_mostrar_senha = findViewById(R.id.ckb_mostrar_senha);
 
@@ -75,6 +73,14 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        btn_registrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         ckb_mostrar_senha.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {

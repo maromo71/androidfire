@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">AndroidFirebaseApp</string>
+    <string name="firebase_project">Firebase Project</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="mostrar_senha">Mostrar Senha</string>
+    <string name="login">Login</string>
+    <string name="registrar">Registrar</string>
+    <string name="logout">Logout</string>
 </resources>

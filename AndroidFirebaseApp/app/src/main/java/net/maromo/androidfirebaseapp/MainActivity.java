@@ -15,7 +15,6 @@ import net.maromo.androidfirebaseapp.activity.LoginActivity;
 public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
-    private Button btn_logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mAuth = FirebaseAuth.getInstance();
-        btn_logout = findViewById(R.id.btn_logout);
+        Button btn_logout = findViewById(R.id.btn_logout);
 
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
